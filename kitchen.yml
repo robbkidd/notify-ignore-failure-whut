@@ -21,3 +21,10 @@ suites:
   - name: default
     run_list:
     - recipe[will-it-blend]
+  - name: butfailnow
+    run_list:
+    - recipe[will-it-blend]
+    attributes:
+      will-it-blend:
+        should-i-succeed?: false
+
