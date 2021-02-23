@@ -1,0 +1,23 @@
+---
+driver:
+  name: dokken
+  chef_version: 13
+
+transport:
+  name: dokken
+
+provisioner:
+  name: dokken
+
+verifier:
+  name: inspec
+
+platforms:
+- name: amazonlinux
+  driver:
+    image: dokken/amazonlinux
+
+suites:
+  - name: default
+    run_list:
+    - recipe[will-it-blend]
